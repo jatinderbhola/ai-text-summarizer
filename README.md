@@ -87,32 +87,35 @@ All test types are documented in [how-to/test-instructions.md](how-to/test-instr
 
 ```
 ai-text-summarizer/
-├── how-to/                 # Learning and Documentation
-│   ├── steps.md           # Step-by-step setup and implementation guide
-│   ├── learnings.md       # Key insights and learning points
-│   ├── changelog.md       # Project progress and changes
-│   └── test-instructions.md # How to run all tests and test types
+├── how-to/                              # Learning and Documentation
+│   ├── steps.md                         # Step-by-step setup and implementation guide
+│   ├── learnings.md                     # Key insights and learning points
+│   └── test-instructions.md             # How to run all tests and test types
 │
-├── model/                  # Model-specific Components
-│   └── bart-cnn/          # BART-CNN Model Implementation
-│       ├── config.txt     # Model configuration and parameters
-│       ├── requirements.txt # Model-specific dependencies
-│       └── env/           # Virtual environment (not tracked)
+├── model/                               # Model-specific Components
+│   └── bart-cnn/                        # BART-CNN Model Implementation
+│       ├── config.txt                   # Model configuration and parameters
+│       ├── requirements.txt             # Model-specific dependencies
+│       └── env/                         # Virtual environment (not tracked)
 │
-├── project/               # Core Application Code
-│   ├── summarizer.py     # Main summarization logic
-│   ├── app.py           # Streamlit web interface
-│   └── README.md        # Application-specific documentation
-│   └── tests/           # All tests for the project
+├── project/                             # Core Application Code
+│   ├── summarizer.py                    # Main summarization logic
+│   ├── app.py                           # Streamlit web interface
+│   └── README.md                        # Application-specific documentation
+│   └── tests/                           # All tests for the project
 │       ├── __init__.py                  # Makes tests a package
 │       ├── test_data.py                 # Shared sample texts for tests
 │       ├── test_summarizer.py           # Unit tests (unittest framework)
 │       ├── test_summarizer_script.py    # Script-style/print-based tests
 │       └── sample_texts.py              # Manual playground for new test cases
-└── .gitignore           # Git ignore configuration
+├── DEVELOPMENT.md                       # Developer/contributor documentation (changelog, testing, dev tools)
+├── changelog.md                         # Project progress and changes
+├── package.json                         # minimal package json to support auto-changelog
+└── .gitignore                           # Git ignore configuration
 ```
 
 **Test documentation:** See [how-to/test-instructions.md](how-to/test-instructions.md) for how to run all tests and test types.
+**Development documentation:** See [DEVELOPMENT.md](DEVELOPMENT.md) for changelog, dev tools, and contributor info.
 </details>
 
 <details>
@@ -124,6 +127,7 @@ ai-text-summarizer/
 - [Learning Journal](how-to/learnings.md) - Development insights and best practices
 - [Project Progress](how-to/changelog.md) - Development timeline and changes
 - [Test Instructions](how-to/test-instructions.md) - **How to run all tests and test types**
+- [Development Guide](DEVELOPMENT.md) - **Dev tools, changelog, and contributor info**
 
 ### Key Topics Covered
 - Type hints and static typing in Python
@@ -184,6 +188,8 @@ While this is primarily a learning project, suggestions and improvements are wel
 3. Commit your changes with meaningful messages
 4. Push to your branch
 5. Open a Pull Request
+
+[More details](./CONTRIBUTING.md)
 </details>
 
 <details>
