@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2024-03-21] - Documentation and UI Enhancement
+## [2025-03-21] - Enhance UI with custom CSS and footer
+> [bca581a](https://github.com/jatinderbhola/ai-text-summarizer/commit/bca581a)
+
+### Added
+- Add custom CSS for layout and styling improvements
+- Implement sticky footer with author and project information
+- Update header and description formatting for better presentation
+
+
+## [2025-03-21] - Documentation and UI Enhancement
 > [568f92c](https://github.com/jatinderbhola/ai-text-summarizer/commit/568f92c)
 
 ### Added
@@ -22,7 +31,7 @@ All notable changes to this project will be documented in this file.
   - Author info
 - Implemented collapsible sections using HTML details tags
 
-## [2024-03-21] - Project Documentation
+## [2025-03-21] - Project Documentation
 > [e66cc46](https://github.com/jatinderbhola/ai-text-summarizer/commit/e66cc46)
 
 ### Added
@@ -38,7 +47,7 @@ All notable changes to this project will be documented in this file.
 - Improved setup instructions
 - Added code documentation
 
-## [2024-03-21] - Text Summarization Implementation
+## [2025-03-21] - Text Summarization Implementation
 > [c79b667](https://github.com/jatinderbhola/ai-text-summarizer/commit/c79b667)
 
 ### Added
@@ -59,7 +68,7 @@ All notable changes to this project will be documented in this file.
   - torch
   - streamlit
 
-## [2024-03-21] - Initial Project Setup
+## [2025-03-21] - Initial Project Setup
 > [091143e](https://github.com/jatinderbhola/ai-text-summarizer/commit/091143e)
 
 ### Added

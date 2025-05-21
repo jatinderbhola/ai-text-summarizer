@@ -8,6 +8,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-Framework-red)](https://pytorch.org/)
 [![AI](https://img.shields.io/badge/AI-Text%20Summarization-brightgreen)](https://github.com/jatinderbhola/ai-text-summarizer)
 [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-brightgreen)](https://github.com/jatinderbhola/ai-text-summarizer)
+[![Tests: documented](https://img.shields.io/badge/Tests-documented-blueviolet)](how-to/test-instructions.md)
 
 [![Author](https://img.shields.io/badge/Author-Jatinder%20(Jay)%20Bhola-blue)](https://www.linkedin.com/in/jatinderbhola)
 [![Website](https://img.shields.io/badge/Website-DiceCape.com-lightgrey)](https://www.dicecape.com)
@@ -71,6 +72,16 @@ A learning-focused project implementing an AI-powered text summarization tool us
 - Learning Git workflow and meaningful commit practices
 </details>
 
+## 🧪 Testing Philosophy
+
+This project values both **robust automated testing** and **practical manual inspection**:
+
+- **Unit tests** (in `tests/test_summarizer.py`) ensure core summarization logic is correct, edge cases are handled, and regressions are caught early. These are run automatically and use assertions for reliability.
+- **Script-style tests** (in `tests/test_summarizer_script.py`) allow for quick, human-readable inspection of summarizer output on a variety of real-world texts.
+- **Manual playgrounds** (in `tests/sample_texts.py`) provide a space for experimentation and rapid prototyping of new test cases or edge scenarios.
+
+All test types are documented in [how-to/test-instructions.md](how-to/test-instructions.md) for easy onboarding and reproducibility.
+
 <details>
 <summary>🏗️ Project Structure</summary>
 
@@ -79,7 +90,8 @@ ai-text-summarizer/
 ├── how-to/                 # Learning and Documentation
 │   ├── steps.md           # Step-by-step setup and implementation guide
 │   ├── learnings.md       # Key insights and learning points
-│   └── changelog.md       # Project progress and changes
+│   ├── changelog.md       # Project progress and changes
+│   └── test-instructions.md # How to run all tests and test types
 │
 ├── model/                  # Model-specific Components
 │   └── bart-cnn/          # BART-CNN Model Implementation
@@ -91,9 +103,16 @@ ai-text-summarizer/
 │   ├── summarizer.py     # Main summarization logic
 │   ├── app.py           # Streamlit web interface
 │   └── README.md        # Application-specific documentation
-│
+│   └── tests/           # All tests for the project
+│       ├── __init__.py                  # Makes tests a package
+│       ├── test_data.py                 # Shared sample texts for tests
+│       ├── test_summarizer.py           # Unit tests (unittest framework)
+│       ├── test_summarizer_script.py    # Script-style/print-based tests
+│       └── sample_texts.py              # Manual playground for new test cases
 └── .gitignore           # Git ignore configuration
 ```
+
+**Test documentation:** See [how-to/test-instructions.md](how-to/test-instructions.md) for how to run all tests and test types.
 </details>
 
 <details>
@@ -104,6 +123,7 @@ ai-text-summarizer/
 - [Code Concepts & Explanations](how-to/code-explanations.md) - Advanced Python features explained
 - [Learning Journal](how-to/learnings.md) - Development insights and best practices
 - [Project Progress](how-to/changelog.md) - Development timeline and changes
+- [Test Instructions](how-to/test-instructions.md) - **How to run all tests and test types**
 
 ### Key Topics Covered
 - Type hints and static typing in Python
