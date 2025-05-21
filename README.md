@@ -13,21 +13,66 @@
 [![Website](https://img.shields.io/badge/Website-DiceCape.com-lightgrey)](https://www.dicecape.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-jatinderbhola-blue)](https://linkedin.com/in/jatinderbhola)
 
-## Project Overview
+## 🎯 Quick Start
+
+1. **Clone and Setup:**
+   ```bash
+   git clone https://github.com/jatinderbhola/ai-text-summarizer.git
+   cd ai-text-summarizer
+   ```
+
+2. **Run the App:**
+   ```bash
+   cd model/bart-cnn
+   python -m venv env && source env/bin/activate  # On Windows: .\env\Scripts\activate
+   pip install -r requirements.txt
+   cd ../.. && streamlit run project/app.py
+   ```
+
+## ⭐ Support & Feedback
+
+If you find this project useful or interesting:
+
+<div align="center">
+
+### Show Your Support
+
+⭐ Star this repository to show your appreciation and help others discover it! ⭐
+
+</div>
+
+> Your support motivates me to create more open-source AI projects and educational content. Every star makes a difference and helps this project reach more developers interested in AI and NLP.
+
+<div align="center">
+
+[![Stargazers](https://img.shields.io/github/stars/jatinderbhola/ai-text-summarizer?style=for-the-badge)](https://github.com/jatinderbhola/ai-text-summarizer/stargazers)
+[![Forks](https://img.shields.io/github/forks/jatinderbhola/ai-text-summarizer?style=for-the-badge)](https://github.com/jatinderbhola/ai-text-summarizer/network/members)
+
+</div>
+
+<details>
+<summary>📖 Project Overview</summary>
 
 A learning-focused project implementing an AI-powered text summarization tool using state-of-the-art natural language processing models. This project uses the BART-large-CNN model from Hugging Face to generate concise and accurate summaries of text content.
 
-## Project Purpose
+### Key Features
+- 📝 Text summarization using BART-CNN model
+- 🌐 Interactive web interface
+- ⚡ Efficient processing pipeline
+- 🔧 Customizable summary parameters
+- 📊 Summary statistics and metrics
 
-This project serves as a practical learning experience in:
+### Learning Objectives
 - Working with modern NLP models and transformers
 - Understanding model deployment and integration
 - Building user interfaces for AI applications
 - Managing Python virtual environments
 - Following best practices in project structure and documentation
 - Learning Git workflow and meaningful commit practices
+</details>
 
-## Project Structure
+<details>
+<summary>🏗️ Project Structure</summary>
 
 ```
 ai-text-summarizer/
@@ -49,80 +94,69 @@ ai-text-summarizer/
 │
 └── .gitignore           # Git ignore configuration
 ```
+</details>
 
-## Documentation Quick Links
+<details>
+<summary>📚 Documentation & Resources</summary>
 
-- [Setup Guide](how-to/steps.md) - Detailed instructions for setting up and running the project
-- [Learning Journal](how-to/learnings.md) - Key insights about GenAI development, best practices, and technical concepts
-- [Project Progress](how-to/changelog.md) - Chronological record of project development and changes
+### Implementation Guides
+- [Step-by-Step Setup Guide](how-to/steps.md) - Complete setup instructions
+- [Code Concepts & Explanations](how-to/code-explanations.md) - Advanced Python features explained
+- [Learning Journal](how-to/learnings.md) - Development insights and best practices
+- [Project Progress](how-to/changelog.md) - Development timeline and changes
 
-## Requirements
+### Key Topics Covered
+- Type hints and static typing in Python
+- Professional logging practices
+- Object-oriented design patterns
+- Error handling best practices
+- Model deployment considerations
+- Performance optimization techniques
+
+### External Resources
+- [Hugging Face Transformers](https://huggingface.co/docs/transformers/index)
+- [BART Model Documentation](https://huggingface.co/facebook/bart-large-cnn)
+- [Streamlit Guide](https://docs.streamlit.io)
+</details>
+
+<details>
+<summary>⚙️ Technical Requirements</summary>
 
 ### System Requirements
 - Python 3.8 or higher
 - Git
-- Sufficient RAM for model operations (minimum 8GB recommended)
+- Sufficient RAM (minimum 8GB recommended)
 
 ### Key Dependencies
 - `transformers` - Hugging Face Transformers library for NLP
 - `torch` - PyTorch for deep learning operations
 - `streamlit` - Web interface framework
-- See `model/bart-cnn/requirements.txt` for complete list
 
-## Getting Started
+See `model/bart-cnn/requirements.txt` for complete list
+</details>
 
-1. Clone the repository:
-```bash
-git clone https://github.com/jatinderbhola/ai-text-summarizer.git
-cd ai-text-summarizer
-```
+<details>
+<summary>🎓 Learning Focus</summary>
 
-2. Set up the virtual environment:
-```bash
-cd model/bart-cnn
-python -m venv env
-source env/bin/activate  # On Windows: .\env\Scripts\activate
-```
+### Model Understanding
+- BART architecture and capabilities
+- Transfer learning in NLP
+- Model configuration and parameters
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-cd ../..  # Return to project root
-```
+### Software Engineering
+- Clean code practices
+- Project structure
+- Documentation standards
+- Version control
 
-4. Run the application:
-```bash
-streamlit run project/app.py
-```
+### User Experience
+- Web interface design
+- Error handling
+- User feedback
+</details>
 
-## Project Features
-
-- 📝 Text summarization using BART-CNN model
-- 🌐 Interactive web interface
-- ⚡ Efficient processing pipeline
-- 🔧 Customizable summary parameters
-- 📊 Summary statistics and metrics
-
-## Learning Focus
-
-This project emphasizes:
-1. **Model Understanding**
-   - BART architecture and capabilities
-   - Transfer learning in NLP
-   - Model configuration and parameters
-
-2. **Software Engineering**
-   - Clean code practices
-   - Project structure
-   - Documentation standards
-   - Version control
-
-3. **User Experience**
-   - Web interface design
-   - Error handling
-   - User feedback
-
-## Contributing
+<details>
+<summary>🤝 Contributing</summary>
 
 While this is primarily a learning project, suggestions and improvements are welcome:
 1. Fork the repository
@@ -130,13 +164,16 @@ While this is primarily a learning project, suggestions and improvements are wel
 3. Commit your changes with meaningful messages
 4. Push to your branch
 5. Open a Pull Request
+</details>
 
-## License
+<details>
+<summary>📜 License & Acknowledgments</summary>
 
+### License
 This project is open source and available under the MIT License.
 
-## Acknowledgments
-
+### Acknowledgments
 - [Hugging Face](https://huggingface.co/) for the transformers library
 - [BART Model Team](https://arxiv.org/abs/1910.13461) for the base model
-- [Streamlit](https://streamlit.io/) for the web framework 
+- [Streamlit](https://streamlit.io/) for the web framework
+</details> 
