@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2025-03-21] - docs: update README and changelog with testing philosophy and instructions
+> [b04b2c2](https://github.com/jatinderbhola/ai-text-summarizer/commit/b04b2c2)
+
+### Added
+- Add testing philosophy section to README, detailing unit tests, script-style tests, and manual playgrounds
+- Include link to test instructions for easy onboarding
+- Update changelog with recent documentation enhancements
+
 ## [2025-03-21] - Enhance UI with custom CSS and footer
 > [bca581a](https://github.com/jatinderbhola/ai-text-summarizer/commit/bca581a)
 
@@ -9,7 +17,6 @@ All notable changes to this project will be documented in this file.
 - Add custom CSS for layout and styling improvements
 - Implement sticky footer with author and project information
 - Update header and description formatting for better presentation
-
 
 ## [2025-03-21] - Documentation and UI Enhancement
 > [568f92c](https://github.com/jatinderbhola/ai-text-summarizer/commit/568f92c)
