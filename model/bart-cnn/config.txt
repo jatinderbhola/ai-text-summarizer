@@ -1,0 +1,59 @@
+# BART-CNN Model Configuration
+
+## Selected Model
+Model Name: BART-large-CNN
+Source: Hugging Face Hub
+Model ID: facebook/bart-large-cnn
+Link: https://huggingface.co/facebook/bart-large-cnn
+
+## Why This Model?
+
+1. Specialized Training:
+   - Pre-trained specifically for summarization tasks
+   - Fine-tuned on CNN Daily Mail dataset
+   - Optimized for news articles and similar content
+
+2. Performance Characteristics:
+   - Good balance between quality and speed
+   - Supports variable length input/output
+   - Produces coherent and fluent summaries
+
+3. Technical Specifications:
+   - Architecture: BART (Bidirectional Auto-Regressive Transformers)
+   - Size: ~400MB
+   - Input token limit: 1024 tokens
+   - Language: English
+
+## Default Parameters
+
+summarization_pipeline:
+  - max_length: 130
+  - min_length: 30
+  - do_sample: False
+  - early_stopping: True
+  - num_beams: 4
+  - temperature: 1.0
+
+## Usage Notes
+
+- Best suited for medium-length articles (100-1000 words)
+- Performs well on formal/structured text
+- May need adjustments for very technical content
+- Consider chunking for longer texts
+
+## Model Advantages
+
+1. Summarization Quality:
+   - Maintains context and key information
+   - Generates grammatically correct summaries
+   - Good at handling news articles and formal text
+
+2. Ease of Use:
+   - Well-documented
+   - Integrated with Hugging Face Transformers
+   - Active community support
+
+3. Performance:
+   - Reasonable inference speed on CPU
+   - GPU acceleration available
+   - Memory efficient with proper batching 
