@@ -2,9 +2,24 @@
 
 This document provides guidance for contributors and maintainers working on the AI Text Summarizer project. It covers changelog automation, testing, and other development best practices.
 
----
+## 🛠️ Developer Environment Setup
 
-## 📝 Changelog Automation
+### 📝 Required deps
+
+**Lint and Formatting**
+
+Before contributing, install the following tools in your virtual environment:
+
+```bash
+pip install flake8
+pip install black
+```
+
+- Use `make lint` to check code style with flake8.
+- Use `make format` to auto-format code with black (if enabled in Makefile).
+
+
+**Changelog Automation**
 
 This project uses [auto-changelog](https://github.com/CookPete/auto-changelog) to generate and update `CHANGELOG.md` from commit history.
 
@@ -49,6 +64,19 @@ All test types are documented in [how-to/test-instructions.md](how-to/test-instr
   - Run: `make lint` (requires `flake8`)
 - **Clean Python cache files:**
   - Run: `make clean`
+
+### 🧹 Lint, Format, and Auto-Fix
+
+**Install these tools in your virtual environment:**
+
+```bash
+pip install flake8 black autoflake
+```
+
+- Use `make lint` to check code style with flake8.
+- Use `make format` to auto-format code with black.
+- Use `make autoflake` to remove unused imports and variables.
+- Use `make fix` to run autoflake, black, and flake8 in sequence for a full auto-fix and lint check.
 
 ---
 

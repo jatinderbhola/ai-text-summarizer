@@ -17,14 +17,15 @@ from .test_data import (
     DIALOGUE_TEXT
 )
 
+
 class TestSummarizer(unittest.TestCase):
     """Test cases for the TextSummarizer class."""
-    
+
     @classmethod
     def setUpClass(cls):
         """Set up the summarizer instance once for all tests."""
         cls.summarizer = TextSummarizer()
-    
+
     def test_short_text(self):
         """Test summarization of a short, simple text."""
         result = self.summarizer.summarize(SHORT_TEXT, max_length=50, min_length=20)
@@ -32,13 +33,13 @@ class TestSummarizer(unittest.TestCase):
         self.assertIn('compression_ratio', result)
         self.assertTrue(0 < result['compression_ratio'] <= 1)
         self.assertTrue(20 <= len(result['summary'].split()) <= 50)
-    
+
     def test_technical_text(self):
         """Test summarization of technical content."""
         result = self.summarizer.summarize(TECHNICAL_TEXT)
         self.assertIn('neural networks', result['summary'].lower())
         self.assertTrue(result['summary_length'] < result['original_length'])
-    
+
     def test_long_text(self):
         """Test summarization of a long historical text."""
         result = self.summarizer.summarize(
@@ -53,19 +54,19 @@ class TestSummarizer(unittest.TestCase):
         if result['summary_length'] < 50:
             print(f"Warning: summary shorter than min_length (got {result['summary_length']})")
         self.assertTrue(result['summary_length'] <= 150)
-    
+
     def test_news_article(self):
         """Test summarization of a news article."""
         result = self.summarizer.summarize(NEWS_TEXT)
         self.assertIn('quantum', result['summary'].lower())
         self.assertTrue(result['compression_ratio'] < 0.5)
-    
+
     def test_scientific_text(self):
         """Test summarization of scientific content."""
         result = self.summarizer.summarize(SCIENTIFIC_TEXT)
         self.assertIn('alphafold', result['summary'].lower())
         self.assertTrue(result['compression_ratio'] < 0.5)
-    
+
     def test_multi_topic(self):
         """Test summarization of text covering multiple topics."""
         result = self.summarizer.summarize(MULTI_TOPIC_TEXT)
@@ -74,25 +75,25 @@ class TestSummarizer(unittest.TestCase):
         has_climate = 'climate' in summary or 'weather' in summary
         has_tech = 'technology' in summary or 'ai' in summary
         self.assertTrue(has_climate or has_tech)
-    
+
     def test_dialogue_text(self):
         """Test summarization of text with quotes."""
         result = self.summarizer.summarize(DIALOGUE_TEXT)
         self.assertIn('apollo 11', result['summary'].lower())
         # Should preserve at least one quote
         self.assertIn('"', result['summary'])
-    
+
     def test_empty_text(self):
         """Test handling of empty text."""
         with self.assertRaises(ValueError):
             self.summarizer.summarize("")
-    
+
     def test_very_short_text(self):
         """Test handling of very short input."""
         very_short = "This is a very short text."
         result = self.summarizer.summarize(very_short)
         self.assertIn('summary', result)
-    
+
     def test_length_constraints(self):
         """Test if summary respects length constraints."""
         result = self.summarizer.summarize(
@@ -106,5 +107,6 @@ class TestSummarizer(unittest.TestCase):
             print(f"Warning: summary shorter than min_length (got {summary_length})")
         self.assertTrue(summary_length <= 100)
 
+
 if __name__ == '__main__':
-    unittest.main(verbosity=2) 
+    unittest.main(verbosity=2)

@@ -1,6 +1,6 @@
 # Makefile for AI Text Summarizer Project
 
-.PHONY: app summarizer test test-script test-manual lint clean
+.PHONY: app summarizer test test-script test-manual lint format autoflake fix clean
 
 # Run the Streamlit web app
 app:
@@ -18,6 +18,20 @@ test:
 test-script:
 	python -m project.tests.test_summarizer_script
 
+# Format the project (requires black)
+format:
+	black project/
+
+# Lint the project (requires flake8)
+lint:
+	flake8 project/
+
+# Remove unused imports and variables (requires autoflake)
+autoflake: 
+	autoflake --in-place --remove-unused-variables --remove-all-unused-imports -r project/
+
+# Auto-fix: autoflake, then black, then flake8
+fix: autoflake format lint
 
 # Remove Python cache files
 clean:
