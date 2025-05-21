@@ -1,6 +1,6 @@
 # Makefile for AI Text Summarizer Project
 
-.PHONY: app summarizer test test-script test-manual lint format autoflake fix clean
+.PHONY: app summarizer test test-script test-manual lint format autoflake fix clean changelog
 
 # Run the Streamlit web app
 app:
@@ -36,4 +36,8 @@ fix: autoflake format lint
 # Remove Python cache files
 clean:
 	find . -type d -name '__pycache__' -exec rm -rf {} +
-	find . -type f -name '*.pyc' -delete 
+	find . -type f -name '*.pyc' -delete
+
+# Update the changelog (requires auto-changelog)
+changelog:
+	auto-changelog -p 
