@@ -31,6 +31,7 @@
    pip install -r requirements.txt
    cd ../.. && streamlit run project/app.py
    ```
+[Check out the Demo](https://ai-text-summarizer-by-jay.streamlit.app/)
 
 ## ⭐ Support & Feedback
 
