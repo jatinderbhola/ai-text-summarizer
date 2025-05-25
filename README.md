@@ -77,7 +77,8 @@ A learning-focused project implementing an AI-powered text summarization tool us
 - Learning Git workflow and meaningful commit practices
 </details>
 
-## 🧪 Testing Philosophy
+<details>
+<summary>🧪 Testing Philosophy</summary>
 
 This project values both **robust automated testing** and **practical manual inspection**:
 
@@ -87,7 +88,10 @@ This project values both **robust automated testing** and **practical manual ins
 
 All test types are documented in [how-to/test-instructions.md](how-to/test-instructions.md) for easy onboarding and reproducibility.
 
+</details>
+
 <details>
+   
 <summary>🏗️ Project Structure</summary>
 
 ```
