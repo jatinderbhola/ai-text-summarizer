@@ -14,6 +14,8 @@
 [![Website](https://img.shields.io/badge/Website-DiceCape.com-lightgrey)](https://www.dicecape.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-jatinderbhola-blue)](https://linkedin.com/in/jatinderbhola)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/j_bhola)
+
 ## 🎯 Quick Start
 
 1. **Clone and Setup:**
@@ -39,6 +41,8 @@ If you find this project useful or interesting:
 ### Show Your Support
 
 ⭐ Star this repository to show your appreciation and help others discover it! ⭐
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/j_bhola)
 
 </div>
 
